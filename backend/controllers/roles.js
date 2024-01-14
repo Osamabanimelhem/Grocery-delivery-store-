@@ -1,5 +1,6 @@
 const roleModel=require("../models/roles")
 
+//  1. this function create Role
 const createNewRole = (req, res) => {
     const {role,permissions}=req.body
     const newRole=new roleModel({

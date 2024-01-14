@@ -15,6 +15,8 @@ const productRouter = require("./routes/product");
 const cartRouter = require("./routes/cart");
 // import reviewRouter
 const reviewRouter = require("./routes/review");
+// import orderRouter
+const orderRouter = require("./routes/order");
 
 
 
@@ -25,7 +27,7 @@ app.use(cors());
 app.use(express.json());
 
 // Handles any other endpoints [unassigned - endpoints]
-app.use("*", (req, res) => res.status(404).json("NO content at this path"));
+ //app.use("*", (req, res) => res.status(404).json("NO content at this path"));
 
 // users Router
 app.use("/users",usersRouter);
@@ -39,6 +41,8 @@ app.use("/product",productRouter)
 app.use("/cart",cartRouter)
 // review Router
 app.use("/review",reviewRouter)
+// order Router
+app.use("/order",orderRouter)
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
